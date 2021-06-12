@@ -11,7 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import ru.mobilab.sample.R;
+//import ru.mobilab.sample.R;
 
 public class MainActivity extends Activity{
 /** Called when the activity is first created. */
@@ -21,7 +21,7 @@ public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-final Button button1=(Button) findViewById(R.id.button1);
+        final Button button1=(Button) findViewById(R.id.button1);
         button1.setOnClickListener(button_click);
         }
 
