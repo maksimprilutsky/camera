@@ -14,12 +14,16 @@ import android.widget.ImageView;
 //import ru.mobilab.sample.R;
 
 public class MainActivity extends Activity{
+        ImageView iv;
 /** Called when the activity is first created. */
 private static final int CAMERA_PIC_REQUEST=1112;
 @Override
 public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        iv=(ImageView) findViewById(R.id.imageView);
+  //      iv.setImageResource(R.drawable.cat);
 
         final Button button1=(Button) findViewById(R.id.button1);
         button1.setOnClickListener(button_click);
@@ -31,6 +35,7 @@ public void onClick(View v){
 
         Intent cameraIntent=new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(cameraIntent, CAMERA_PIC_REQUEST);
+        iv.setImageResource(R.drawable.cat);
 // TODO Auto-generated method stub
         }
         };
